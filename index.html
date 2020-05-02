@@ -22,16 +22,18 @@
     <link rel="stylesheet" href="css/dialogNewsletter.css">
 
     <meta name="viewport" content="width=device-width">
+
   </head>
   <body>
 
+   <div id="conteudoForaDialog">
     <a href="#conteudoPrincipal" class="pularNavegacao">Pular para conteúdo principal</a>
 
     <header class="cabecalho container">
-      <a href="#" class="cabecalho-logo" title="Home Apeperia">
+      <a href="https://www.google.com" class="cabecalho-logo" title="Home Apeperia">
         <svg width="205" height="59" viewBox="0 0 205 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <title>Logotipo da Apeperia</title>
-<!--                    <desc>Created using Figma</desc>-->
+          <!--                    <desc>Created using Figma</desc>-->
           <g id="Canvas" transform="translate(-2230 1001)">
             <g id="Logo do Apeperia">
               <g id="Oval 1">
@@ -52,7 +54,7 @@
           </defs>
         </svg>
       </a>
-      
+
 
       <nav class="cabecalho-nav">
         <ul>
@@ -67,14 +69,13 @@
     </header>
 
     <main class="conteudo" role="main">
-
       <section class="secaoDestaque">
         <h1 class="secaoDestaque-titulo" id="conteudoPrincipal">
           APLICATIVOS NA MEDIDA
         </h1>
-        <h2 class="secaoDestaque-texto">
+        <p class="secaoDestaque-texto">
           A Apeperia é uma startup com um jeito inovador de comprar e montar aplicativos mobile e web para pequenas e médias empresas
-        </h2>
+        </p>
 
         <button class="secaoDestaque-cta btnPadrao">
           Conheça os planos
@@ -114,7 +115,7 @@
 
       <section class="secaoSobre clearfix">
         <div class="container">
-          <img src="img/sobre-apeperia.png" class="secaoSobre-imgDestaque">
+          <img src="img/sobre-apeperia.png" class="secaoSobre-imgDestaque" alt>
           <h2 class="secaoSobre-titulo tituloPadrao">
             SOBRE
           </h2>
@@ -149,25 +150,25 @@
           </h2>
 
           <div class="secaoPlanos-plano secaoPlanos-plano--start">
-            <h3 class="secaoPlanos-plano-titulo">Start</h3>
-            <h4 class="secaoPlanos-plano-preco">
+            <h3 class="secaoPlanos-plano-titulo"><span class="escondeVisualmente">Plano </span>Start</h3>
+            <span class="secaoPlanos-plano-preco">
               R$ 500
-            </h4>
+            </span>
             <ul class="secaoPlanos-plano-itens">
               <li>5 manutenções mensais</li>
               <li>App SEO</li>
               <li>1 sistema operacional</li>
             </ul>
             <a href="#" class="btnPadrao secaoPlanos-plano-btn">
-              Assinar plano
+              Assinar plano <span class="escondeVisualmente">Start por R$ 500,00</span>
             </a>
           </div>
 
           <div class="secaoPlanos-plano secaoPlanos-plano--ultra">
-            <h3 class="secaoPlanos-plano-titulo">Ultra</h3>
-            <h4 class="secaoPlanos-plano-preco">
+            <h3 class="secaoPlanos-plano-titulo"><span class="escondeVisualmente">Plano </span>Ultra</h3>
+            <span class="secaoPlanos-plano-preco">
               R$ 1500
-            </h4>
+            </span>
             <ul class="secaoPlanos-plano-itens">
               <li>20 manutenções mensais</li>
               <li>App SEO</li>
@@ -175,22 +176,22 @@
               <li>24h de atendimento</li>
             </ul>
             <a href="#" class="btnPadrao secaoPlanos-plano-btn">
-              Assinar plano
+              Assinar plano <span class="escondeVisualmente">Ultra por R$ 1500,00</span>
             </a>
           </div>
 
           <div class="secaoPlanos-plano secaoPlanos-plano--mega">
-            <h3 class="secaoPlanos-plano-titulo">Mega</h3>
-            <h4 class="secaoPlanos-plano-preco">
+            <h3 class="secaoPlanos-plano-titulo"><span class="escondeVisualmente">Plano </span>Mega</h3>
+            <span class="secaoPlanos-plano-preco">
               R$ 1000
-            </h4>
+            </span>
             <ul class="secaoPlanos-plano-itens">
               <li>10 manutenções mensais</li>
               <li>App SEO</li>
               <li>2 sistemas operacionais</li>
             </ul>
             <a href="#" class="btnPadrao secaoPlanos-plano-btn">
-              Assinar plano
+              Assinar plano <span class="escondeVisualmente">Mega por R$ 1000,00</span>
             </a>
           </div>
 
@@ -203,11 +204,13 @@
           BLOG
         </h2>
 
-        <ul class="listaDeArtigos">
+        <h3 id="tituloBlog" class="escondeVisualmente">Lista de Artigos</h3>
 
-          <li id="new0" class="listaDeArtigos-item">
+        <ol class="listaDeArtigos" aria-labelledby="tituloBlog">
+
+          <li id="new0" class="listaDeArtigos-item" data-noticia="0">
             <article class="listaDeArtigos-artigo">
-              <img src="img/10-aplicativos-mais-baixados.png" class="listaDeArtigos-artigo-img" alt="Teclado da Apple e um celular Android">
+              <img src="img/10-aplicativos-mais-baixados.png" class="listaDeArtigos-artigo-img" alt>
               <h2 class="listaDeArtigos-artigo-titulo">
                 Conheça os 10 aplicativos mais badalados do momento
               </h2>
@@ -220,9 +223,9 @@
             </article>
           </li>
 
-          <li id="new1" class="listaDeArtigos-item">
+          <li id="new1" class="listaDeArtigos-item" data-noticia="1">
             <article class="listaDeArtigos-artigo">
-              <img src="img/ux-usabilidade.jpg" class="listaDeArtigos-artigo-img" alt="Pessoa segurando um celular">
+              <img src="img/ux-usabilidade.jpg" class="listaDeArtigos-artigo-img" alt>
               <h2 class="listaDeArtigos-artigo-titulo">
                 Usabilidade: Entenda os benefícios de treinar sua equipe em UX
               </h2>
@@ -235,9 +238,9 @@
             </article>
           </li>
 
-          <li id="new2" class="listaDeArtigos-item">
+          <li id="new2" class="listaDeArtigos-item" data-noticia="2">
             <article class="listaDeArtigos-artigo">
-              <img src="img/dicas-acessibilidade.jpg" class="listaDeArtigos-artigo-img" alt="Pessoas levantando um senhor para ver melhor um show">
+              <img src="img/dicas-acessibilidade.jpg" class="listaDeArtigos-artigo-img" alt>
               <h2 class="listaDeArtigos-artigo-titulo">
                 5 dicas para melhorar a acessibilidade em sua interface
               </h2>
@@ -250,13 +253,13 @@
             </article>
           </li>
 
-        </ul>
+        </ol>
 
         <nav>
           <ul class="listaDeArtigos-slider">
             <li>
               <a href="#new0" data-sliderItem="0" class="listaDeArtigos-slider-item listaDeArtigos-slider-item--ativo">
-                Notícia 1
+                Notícia 1 <span class="escondeVisualmente" id="escondeVisualmente">(Slide atual)</span>
               </a>
             </li>
             <li>
@@ -281,16 +284,16 @@
           <a href="http://blog.apeperia.com.br/design/conheca-primeiras-etapas-criacao-logotipo-teste-teste" class="secaoDestaques-link" aria-labelledby="tituloDestaque1">
             <figure class="secaoDestaques-destaque">
               <img src="img/comecando-criar-logotipo.png" class="secaoDestaques-destaque-img" alt="Ferramentas de designer. Ilustração">
-              <figcaption class="secaoDestaques-destaque-titulo"  id="tituloDestaque1">
+              <figpcation class="secaoDestaques-destaque-titulo" id="tituloDestaque1">
                 Conheça as primeiras etapas na criação de um logotipo
-              </figcaption>
+              </figpcation>
             </figure>
           </a>
 
           <a href="http://blog.apeperia.com.br/design/dicas-como-fotografar-com-celular" class="secaoDestaques-link" aria-labelledby="tituloDestaque2">
             <figure class="secaoDestaques-destaque">
               <img src="img/dicas-fotografia.png" class="secaoDestaques-destaque-img" alt="Moça mostrando câmera para rapaz">
-              <figcaption class="secaoDestaques-destaque-titulo"  id="tituloDestaque2">
+              <figcaption class="secaoDestaques-destaque-titulo" id="tituloDestaque2">
                 Veja dicas de como fotografar usando seu celular
               </figcaption>
             </figure>
@@ -301,28 +304,6 @@
           </button>
         </div>
 
-        <div class="dialogNewsletter" id="dialogNewsletter">
-          <div class="dialogNewsletter-body">
-
-            <h2 class="dialogNewsletter-titulo">News sem spam</h2>
-            <h3 class="dialogNewsletter-texto">
-              Assine nossa newsletter para receber notícias técnicas sem spam!
-            </h3>
-            <form class="dialogNewsletter-form">
-              <label class="dialogNewsletter-label">
-                Email:
-              </label>
-              <input type="text" class="dialogNewsletter-campo" placeholder="Digite seu e-mail...">
-              <button class="dialogNewsletter-btn">
-                Assinar newsletter
-              </button>
-              <button class="dialogNewsletter-fechar">
-                X
-              </button>
-            </form>
-          </div>
-          <div class="dialogNewsletter-overlay"></div>
-        </div> <!--fim .dialogNewsletter-->
 
       </section> <!--fim .secaoDestaques-->
 
@@ -333,59 +314,59 @@
           </h2>
 
           <form class="secaoContato-form">
-
-            <p class="secaoContato-form-legend">
+            <fieldset>
+            <legend class="secaoContato-form-legend">
               Oi, tudo bem? Fale com a gente!
               Preencha seus dados e sua mensagem:
-            </p>
+            </legend>
 
             <div class="contatoCampo contatoCampo--sucesso">
               <label for="nome">Nome: </label>
-              <input type="text" class="contatoCampo--validouFoi" id="nome" placeholder="Nome" required>
+              <input type="text" id="nome" class="contatoCampo--validouFoi" placeholder="Nome..." required>
             </div>  
 
-            <div class="contatoCampo contatoCampo--erro">
+            <div class="contatoCampo">
               <label for="email">Email: </label>
-              <input type="email" class="contatoCampo--validouErro" id="email" placeholder="Enail" required>
-              <span class="contatoCampo-msg contatoCampo-msg--erro">
-                Você quis dizer <a href="#">gmail.com?</a>
+              <input type="email" id="email" placeholder="Email.." required>
+              <span id="sugestao" class="contatoCampo-msg contatoCampo-msg--erro">
+               adfadsfa
               </span>
             </div>
 
             <div class="contatoCampo contatoCampo--erro">
               <label for="telefone">Telefone: </label>
-              <input type="text" class="contatoCampo--validouErro"  id="telefone" placeholder="(11) 5571-2751">
+              <input type="text"  class="contatoCampo--validouErro" placeholder="(11) 5571-2751" id="telefone">
               <span class="contatoCampo-msg contatoCampo-msg--erro">Faltou o DDD</span>
             </div>     
 
             <div class="contatoCampo">
               <label for="cep">CEP: </label>
-              <input type="text" maxlength="8" id="cep" placeholder="Exemplo: 04101-300" required>
+              <input id="cep" type="text" maxlength="8" placeholder="Exemplo: 04101-300" required>
             </div>
 
             <div class="contatoCampo">
               <label for="endereco">Endereço: </label>
-              <input type="text" class="contatoCampo-campoDesabilitado" id="endereco" readonly value="Rua Vergueiro">
+              <input type="text" class="contatoCampo-campoDesabilitado" readonly value="Rua Vergueiro" id="endereco">
             </div>   
 
             <div class="contatoCampo">
               <label for="bairro">Bairro: </label>
-              <input type="text" class="contatoCampo-campoDesabilitado" id="endereco" readonly value="Vila Mariana">
+              <input type="text" class="contatoCampo-campoDesabilitado" readonly value="Vila Mariana" id="bairro">
             </div>   
 
             <div class="contatoCampo">
               <label for="cidade">Cidade: </label>
-              <input type="text" class="contatoCampo-campoDesabilitado" id="cidade" readonly value="São Paulo">
+              <input type="text" class="contatoCampo-campoDesabilitado" readonly value="São Paulo" id="cidade">
             </div>   
 
             <div class="contatoCampo">
               <label for="estado">Estado: </label>
-              <input type="text" class="contatoCampo-campoDesabilitado"  id="estado"  readonly value="SP">
+              <input type="text" class="contatoCampo-campoDesabilitado" readonly value="SP" id="estado"> 
             </div>   
 
             <div class="contatoCampo">
               <label for="mensagem">Mensagem: </label>
-              <textarea name="" cols="30" rows="10" id="mensagem" required></textarea>
+              <textarea id="mensagem" name="" cols="30" rows="10" required></textarea>
             </div>
 
             <div class="contatoCampo">
@@ -401,7 +382,7 @@
                 Verifique os erros acima
               </span>
             </div>
-
+          </fieldset>
           </form>
         </div> <!--fim .container da .secaoContato-->
 
@@ -427,8 +408,7 @@
           </div>
 
           <video src="img/formacao-java.mp4" class="secaoInstitucional-video" controls>
-         <!-- <track src="img/legenda-portugues-brasil.vtt" kind="subtitles" srclang="pt-br" label="Português(Brasil)"> -->
-          <!-- https://www.handtalk.me/br -->
+            <track src="img/legenda-portugues-brasil.vtt" kind="subtitles" srclang="pt-br" label="Português (Brasil)">
           </video>
 
         </div>
@@ -471,7 +451,42 @@
       </div>
 
     </footer>
+    </div>
+    
+
+        <div class="dialogNewsletter" id="dialogNewsletter" role="dialog" aria-labelledby="tituloDialog">
+          <div class="dialogNewsletter-body">
+            <h2 class="dialogNewsletter-titulo" id="tituloDialog">News sem spam</h2>
+            <h3 class="dialogNewsletter-texto">
+              Assine nossa newsletter para receber notícias técnicas sem spam!
+            </h3>
+            <form class="dialogNewsletter-form">
+              <label class="dialogNewsletter-label" for="emailNewsletter">
+                Email:
+              </label>
+              <input type="email" class="dialogNewsletter-campo" placeholder="Digite seu e-mail..." id="emailNewsletter">
+              <button class="dialogNewsletter-btn" type="submit">
+                Assinar newsletter
+              </button>
+              <button class="dialogNewsletter-fechar" type="button" aria-label="Fechar janela modal">
+                Fechar modal
+              </button>
+            </form>
+          </div>
+          <div class="dialogNewsletter-overlay"></div>
+        </div> <!--fim .dialogNewsletter-->
+    
     <script src="js/carousel.js"></script>
+    <script src="js/inert.js"></script>
     <script src="js/dialog.js"></script>
+   <script src="js/validacao-cep.js"></script>
+   <script src="js/mailcheck.js"></script>
+   <script src="js/mailcheck-config.js"></script>
   </body>
 </html>
+
+
+
+
+
+
